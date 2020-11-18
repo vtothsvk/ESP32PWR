@@ -1,5 +1,5 @@
 {
-    "sketch": "ThingSpeak.ino",
+    "sketch": "ESP32PWR.ino",
     "board": "esp32:esp32:m5stick-c",
     "port": "COM26",
     "configuration": "PartitionScheme=default,UploadSpeed=1500000,DebugLevel=none"

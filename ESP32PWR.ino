@@ -54,7 +54,7 @@ void WiFiLoop(void * parameter){
 
 void AXPloop(void * parameter){
     M5.begin();
-    //M5.Axp.ScreenBreath(0);
+    M5.Axp.ScreenBreath(0);
 
     for(uint16_t sizmaj = 0; sizmaj < 600; sizmaj++){
         Serial.printf("%ld, %.2f\n", millis(), M5.Axp.GetVBusCurrent());
@@ -65,8 +65,9 @@ void AXPloop(void * parameter){
 }
 
 void setup(){
+  //M5.begin();
     Serial.begin(115200);
-    btStop();
+    //btStop();
     //setCpuFrequencyMhz(80); //config esp core freq = 80MHz
     
     xTaskCreate(AXPloop, "AXPloop", 10000, NULL, 1, NULL);
@@ -74,5 +75,5 @@ void setup(){
 }
 
 void loop(){
-
+  //delay(100);
 }
